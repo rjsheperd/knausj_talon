@@ -1,6 +1,6 @@
 from talon import Context, Module, actions, app
 
-default_alphabet = "air bat cap drum each fine gust harp sit jury crunch look made near odd pit quench red sun trap urge vest whale plex yank zip".split(
+default_alphabet = "air bat cap drum each fine gust harp sit jill jack look made near odd pit quench red sun trap urge vest whale plex yell zip".split(
     " "
 )
 letters_string = "abcdefghijklmnopqrstuvwxyz"
@@ -137,9 +137,11 @@ punctuation_words = {
     "semicolon": ";",
     "colon": ":",
     "forward slash": "/",
+    "questo": "?",
     "question mark": "?",
     "exclamation mark": "!",
     "exclamation point": "!",
+    "star": "*",
     "asterisk": "*",
     "hash sign": "#",
     "number sign": "#",
@@ -179,14 +181,13 @@ symbol_key_words = {
     "right paren": ")",
     "brace": "{",
     "left brace": "{",
-    "brack": "{",
-    "bracket": "{",
-    "left bracket": "{",
+    "brack": "[",
+    "bracket": "[",
+    "left bracket": "[",
     "r brace": "}",
     "right brace": "}",
-    "r brack": "}",
-    "r bracket": "}",
-    "right bracket": "}",
+    "r brack": "]",
+    "right bracket": "]",
     "angle": "<",
     "left angle": "<",
     "less than": "<",
@@ -234,6 +235,7 @@ simple_keys = [
 alternate_keys = {
     "wipe": "backspace",
     "delete": "backspace",
+    "spacer": "space",
     #'junk': 'backspace',
     "forward delete": "delete",
     "page up": "pageup",

@@ -33,6 +33,18 @@ class UserActions:
     def messaging_open_search():
         actions.key("cmd-f")
 
+    def messaging_edit_last():
+        actions.key("cmd-up")
+
+    def messaging_set_status():
+        actions.key("cmd-shift-y")
+
+    def edit():
+        actions.key("e")
+
+    def message_reply():
+        actions.key("t")
+
     def messaging_mark_workspace_read():
         actions.key("shift-esc")
 

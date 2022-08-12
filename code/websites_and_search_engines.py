@@ -17,7 +17,7 @@ website_defaults = {
     "talon slack": "http://talonvoice.slack.com/messages/help",
     "talon wiki": "https://talon.wiki/",
     "talon practice": "https://chaosparrot.github.io/talon_practice/",
-    "talon repository search": "https://search.talonvoice.com/search/",
+    "talon search": "https://search.talonvoice.com/search/",
     "amazon": "https://www.amazon.com/",
     "dropbox": "https://dropbox.com/",
     "google": "https://www.google.com/",
@@ -34,7 +34,9 @@ website_defaults = {
 _search_engine_defaults = {
     "amazon": "https://www.amazon.com/s/?field-keywords=%s",
     "google": "https://www.google.com/search?q=%s",
+    "duck": "https://www.duckduckgo.com/?q=%s",
     "map": "https://maps.google.com/maps?q=%s",
+    "talon": "https://search.talonvoice.com/search/?q=%s",
     "scholar": "https://scholar.google.com/scholar?q=%s",
     "wiki": "https://en.wikipedia.org/w/index.php?search=%s",
 }
