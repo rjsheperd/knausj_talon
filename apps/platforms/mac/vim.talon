@@ -265,6 +265,10 @@ git pull:
   insert(":G pull")
   key(enter)
 
+git push:
+  insert(":G push")
+  key(enter)
+
 git commit:
   insert(":G commit")
   key(enter)
