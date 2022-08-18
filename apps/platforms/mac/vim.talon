@@ -12,7 +12,11 @@ neo (open) tree:
 neo (close|toggle) tree:
   key(space d)
 
-neo find [<phrase>]:
+neo line search [<user.text>]:
+  key(f)
+  insert(user.text)
+
+neo file search [<phrase>]:
   key(/)
   insert(phrase)
   key(enter)
@@ -151,13 +155,13 @@ go down <number_small> (line|lines):
   insert(number_small)
   key(j)
 
-go left <number_small> (word|words):
-  insert(number_small)
-  key(w)
-
-go right <number_small> (word|words):
+go (back|left) <number_small> (word|words):
   insert(number_small)
   key(b)
+
+go (forward|right) <number_small> (word|words):
+  insert(number_small)
+  key(w)
 
 home:
   app.notify("Please use the voice command 'go line start'")
@@ -195,6 +199,11 @@ select [right] <number_small> (character|characters):
   insert(number_small)
   key(l)
 
+select [down] <number_small> (line|lines):
+  key(shift-v)
+  insert(number_small)
+  key(j)
+
 # Removing Lines
 clear line:
   key(d d)
@@ -203,6 +212,9 @@ clear left <number_small> (word|words):
   key(d)
   insert(number_small)
   key(b)
+
+clear word:
+  key(d w)
 
 clear [right] <number_small> (word|words):
   key(d)
@@ -222,4 +234,42 @@ clear [right] <number_small> (character|characters):
 # Formatting
 
 format line:
+  key(enter)
   key(shift-v =)
+
+surround word brackets:
+  key(y s w ])
+
+surround word braces:
+  key(y s w })
+
+surround word parens:
+  key(y s w)
+  insert(")")
+
+# Reviews
+git diff:
+  insert(":Gdiff main")
+  key(enter)
+
+git diff <phrase>:
+  insert(":Gdiff ")
+  insert(phrase)
+  key(enter)
+
+git patch:
+  insert(":G add --patch")
+  key(enter)
+
+git pull:
+  insert(":G pull")
+  key(enter)
+
+git checkout <phrase>:
+  insert(":G checkout")
+
+# Reviews
+neo convert review:
+  insert(":term pandoc review.org -o review.md")
+  key(enter)
+
