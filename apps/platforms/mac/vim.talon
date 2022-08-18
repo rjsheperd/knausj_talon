@@ -25,7 +25,7 @@ neo replace [<phrase>]:
   insert(":%s/")
   insert(phrase)
 
-neo search files [<phrase>]:
+neo hunt [<phrase>]:
   key(space shift-f)
   insert(phrase)
 
@@ -265,11 +265,19 @@ git pull:
   insert(":G pull")
   key(enter)
 
+git commit:
+  insert(":G commit")
+  key(enter)
+  key(i)
+
 git checkout <phrase>:
   insert(":G checkout")
+
+git add:
+  insert(":G add %")
+  key(tab enter)
 
 # Reviews
 neo convert review:
   insert(":term pandoc review.org -o review.md")
   key(enter)
-

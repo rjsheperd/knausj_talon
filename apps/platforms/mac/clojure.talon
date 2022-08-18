@@ -1,4 +1,4 @@
-os: mac
+os:mac
 app: iterm2
 win.title: /nvim/
 -
@@ -47,3 +47,6 @@ n s: insert ("ns ")
 
 require:
   insert (":require ")
+
+deref keys:
+  insert ("{:keys [")
