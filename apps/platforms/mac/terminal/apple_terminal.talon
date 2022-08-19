@@ -18,6 +18,7 @@ tag(): user.file_manager
 
 suspend:
     key(ctrl-z)
+
 resume:
     insert("fg")
     key(enter)

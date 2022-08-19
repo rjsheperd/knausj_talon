@@ -2,27 +2,38 @@ os: mac
 app: iterm2
 win.title: /matterhorn/
 -
-open matterhorn:
-  insert("matterhorn")
-  key(enter)
-
-matter message [<channel>]:
+message [<channel>]:
   key(ctrl-g)
   insert(channel)
 
-matter switch teams:
+switch teams:
   key(shift-right)
 
-matter react:
+react:
   key(ctrl-s ctrl-s a)
 
-atter thumbs up:
+thumbs up:
   key(ctrl-s ctrl-s a)
   insert("+1")
   key(enter)
 
-matter reply:
+reply:
   key(ctrl-s ctrl-s r)
 
-matter view:
+view:
   key(ctrl-s ctrl-s v)
+
+select:
+  key(ctrl-s ctrl-s)
+
+attach:
+  key(ctrl-x)
+
+# Navigation
+
+go up:
+  key(k)
+
+go down:
+  key(j)
+

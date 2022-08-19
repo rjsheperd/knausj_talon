@@ -248,6 +248,10 @@ surround word parens:
   insert(")")
 
 # Reviews
+git status:
+  insert(":G")
+  key(enter)
+
 git diff:
   insert(":Gdiff main")
   key(enter)
@@ -276,6 +280,7 @@ git commit:
 
 git checkout <phrase>:
   insert(":G checkout")
+  insert(phrase)
 
 git add:
   insert(":G add %")
