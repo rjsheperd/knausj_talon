@@ -12,11 +12,11 @@ neo (open) tree:
 neo (close|toggle) tree:
   key(space d)
 
-neo line search [<user.text>]:
+line search [<user.text>]:
   key(f)
   insert(user.text)
 
-neo file search [<phrase>]:
+file search [<phrase>]:
   key(/)
   insert(phrase)
   key(enter)
@@ -25,11 +25,7 @@ neo replace [<phrase>]:
   insert(":%s/")
   insert(phrase)
 
-neo hunt [<phrase>]:
-  key(space shift-f)
-  insert(phrase)
-
-neo hunt [<phrase>]:
+hunt [<phrase>]:
   key(space shift-f)
   insert(phrase)
 
@@ -45,7 +41,7 @@ neo split horizontal:
   insert(":sp")
   key(enter)
 
-neo line <number>:
+line <number>:
   key(":")
   insert(number)
   key(enter)
