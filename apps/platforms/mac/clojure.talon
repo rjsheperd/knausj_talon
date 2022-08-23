@@ -35,6 +35,12 @@ form down:
 form up:
   key(alt-k)
 
+delete form:
+  key(alt-shift-[)
+  key(v)
+  key(alt-shift-])
+  key(d)
+
 (eat|insert) head:
   key(< I)
 
@@ -64,6 +70,10 @@ neo macro [<phrase>]:
   insert("(defmacro ")
   insert(phrase)
 
+neo comment:
+  key(o escape o)
+  insert("(comment ")
+
 bop:
   insert(")")
 
@@ -78,6 +88,8 @@ cond: insert ("cond ")
 if: insert ("if ")
 
 n s: insert ("ns ")
+
+let: insert ("let [")
 
 require:
   insert (":require ")

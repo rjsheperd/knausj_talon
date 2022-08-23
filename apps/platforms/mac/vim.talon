@@ -122,6 +122,10 @@ page up:
   key(ctrl-u)
 
 # Buffer Navigation
+neo nav [<user.text>]:
+  insert(":b ")
+  insert(user.text)
+
 neo flip:
   key(space space)
 
@@ -134,6 +138,9 @@ neo before:
 neo close:
   insert(":BufferDelete")
   key(enter)
+
+neo close all:
+  key(space b d)
 
 # Pane Navigation
 neo top pane:    key(ctrl-k)
@@ -202,6 +209,39 @@ select [down] <number_small> (line|lines):
   key(shift-v)
   insert(number_small)
   key(j)
+
+# Changing Lines
+change word:
+  key(c w)
+
+change line:
+  key(c c)
+
+change left <number_small> (word|words):
+  key(c)
+  insert(number_small)
+  key(b)
+
+change [right] <number_small> (word|words):
+  key(c)
+  insert(number_small)
+  key(w)
+
+change left <number_small> (character|characters):
+  key(c)
+  insert(number_small)
+  key(h)
+
+change [right] <number_small> (character|characters):
+  key(c)
+  insert(number_small)
+  key(l)
+
+change [down] <number_small> (line|lines):
+  key(shift-v)
+  insert(number_small)
+  key(j)
+  key(c)
 
 # Removing Lines
 clear line:
