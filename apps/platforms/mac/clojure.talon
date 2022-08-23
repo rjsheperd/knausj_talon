@@ -3,18 +3,52 @@ app: iterm2
 win.title: /nvim/
 -
 
-neo slurp:
+# Form Navigation
+form next: key(alt-])
+next form: key(alt-])
+
+form (back|prev):
+  key(alt-shift-[)
+
+[(back|prev)] outer form:
+  key([ [)
+
+next outer form:
+  key(] ])
+
+# Form Manipulation
+slurp:
   key(> >)
 
-neo barf:
+barf:
   key(< <)
 
+form right:
+  key(alt-l)
+
+form left:
+  key(alt-h)
+
+form down:
+  key(alt-j)
+
+form up:
+  key(alt-k)
+
+(eat|insert) head:
+  key(< I)
+
+(eat|insert) tail:
+  key(> I)
+
+# Evaluation
 neo eval:
   key(c p p)
 
 neo eval all:
   key(c p shift-g)
 
+# Shorcuts
 neo def [<phrase>]:
   key(o escape o)
   insert("(def ")

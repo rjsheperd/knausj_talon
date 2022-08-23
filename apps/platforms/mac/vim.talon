@@ -81,6 +81,9 @@ begin (eat|insert):
 visual:
   key(v)
 
+cutter:
+  key(x)
+
 yank:
   key(y)
 
@@ -90,7 +93,7 @@ yank word:
 yank line:
   key(y y)
 
-paste:
+paster:
   key(p)
 
 neo go [to] (tip|top):
@@ -153,11 +156,11 @@ go down <number_small> (line|lines):
 
 go (back|left) <number_small> (word|words):
   insert(number_small)
-  key(b)
+  key(alt-shift-b)
 
 go (forward|right) <number_small> (word|words):
   insert(number_small)
-  key(w)
+  key(alt-shift-w)
 
 home:
   app.notify("Please use the voice command 'go line start'")
@@ -243,7 +246,24 @@ surround word parens:
   key(y s w)
   insert(")")
 
-# Reviews
+# Folds
+
+neo (fold|unfold):
+  key(z shift-a)
+
+neo fold all:
+  key(z shift-m)
+
+neo unfold all:
+  key(z shift-r)
+
+neo next fold:
+  key(z j)
+
+neo (before|back) fold:
+  key(z k)
+
+# Git
 git status:
   insert(":G")
   key(enter)
